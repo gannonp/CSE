@@ -55,5 +55,5 @@ print("I have a car called %s. It is a %s." % (car_name,car_type))
 
 # Recasting
 real_age = int(input("How old are you again?"))
-hidden_age = real_age + 5
+hidden_age = real_age + 10
 print("This is your real age: %d" % hidden_age)
