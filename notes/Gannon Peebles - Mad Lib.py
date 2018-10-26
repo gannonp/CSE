@@ -1,4 +1,4 @@
-adjective = input("What adjective?")
+adjective = input("Name a noun?")
 adjective1 = input("Another adjective, example: good.")
 people_animal = input("A person or animal.")
 protest_topic = input("What are you protesting?")
