@@ -146,4 +146,12 @@ print(your_grade)
 import random
 print (random.randint(0,100))
 
-
+# Equality Statements
+print(5 > 3)
+print(5 >= 3)
+print(3 == 3)
+print(3 != 4)
+"""
+a = 3 # A is set to 3
+a == 3 # Is a equal to 3?
+"""
