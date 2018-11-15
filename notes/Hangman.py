@@ -1,4 +1,6 @@
+import random
 word = ['computer', 'keyboard', 'mouse', 'charger', 'clock']
+random
 turns = 10
 
 while turns >= 1:
