@@ -8,3 +8,5 @@ while turns >= 1:
     if guess == word:
         print("You got a letter correct!")
         turns =- 5
+    else:
+        pr
