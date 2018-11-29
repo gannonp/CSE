@@ -1,6 +1,6 @@
 import random
 word = ["computer", "keyboard", "mouse", "charger", "clock"]
-random.sample
+print(random.choice(word))
 turns = 10
 
 while turns >= 1:
