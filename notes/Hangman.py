@@ -1,6 +1,6 @@
 import random
-word = ['computer', 'keyboard', 'mouse', 'charger', 'clock']
-random
+word = ["computer", "keyboard", "mouse", "charger", "clock"]
+random.sample
 turns = 10
 
 while turns >= 1:
@@ -9,4 +9,4 @@ while turns >= 1:
         print("You got a letter correct!")
         turns =- 5
     else:
-        pr
+        print("You got it wrong")
