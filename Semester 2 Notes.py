@@ -1,3 +1,4 @@
+import string
 print("Hello world")
 
 # g ball yt
@@ -27,3 +28,7 @@ print(colors)
 print(colors[2])
 
 print(len(colors))
+
+print(list(string.ascii_letters))
+print(string.digits)
+print(string.punctuation)
