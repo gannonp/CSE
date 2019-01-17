@@ -1,32 +1,41 @@
 import random
 import string
 print("LETS PLAY HANGMAN!!!")
-words = ["computer", "keyboard", "mouse", "charger", "clock", "glasses", "books", "microwave", "flag", "camera"]
+words = ["computer", "keyboard!", "mouse", "Computech?", "clock", "glasses", "books", "microwave", "flag", "cabinet",
+         "camouflage"]
 guesses = 8
 list_of_letters = string.ascii_letters
 
 output = []
 word_selection = random.choice(words)
+word_selection = "Pizza."
 word_list = list(word_selection)
 length = len(word_selection)
-print(word_selection)
+punctuation = string.punctuation
+list_of_punctuation = list(punctuation)
+# print(word_selection)
 for i in range(length):
     output.append("_ ")
+
+for i in range(length):
+    for j in range(len(list_of_punctuation)):
+        if list_of_punctuation[j] in word_selection[i]:
+            output.pop(i)
+            output.insert(i, list_of_punctuation[j])
+
+
 print("".join(output))
 # print(word_list)
 
 while guesses > 0 and len(word_list) > 0:
-    user_guess = input("Guess a letter")
+    user_guess = input("Guess a letter ")
     print('\n' * 10)
-    if user_guess in word_selection:
+    if user_guess.lower() in word_selection or user_guess.upper() in word_selection:
         print("You got it right!")
         for i in range(len(word_selection)):
-            if user_guess in word_list:
-                word_list.pop(i)
-        for i in range(len(word_selection)):
-            if word_selection[i] == user_guess:
+            if word_selection[i].lower() == user_guess.lower():
                 output.pop(i)
-                output.insert(i, user_guess)
+                output.insert(i, word_selection[i])
         print("".join(output))
     else:
         print("You got it wrong!")
