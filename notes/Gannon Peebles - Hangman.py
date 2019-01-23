@@ -1,21 +1,20 @@
 import random
 import string
 print("LETS PLAY HANGMAN!!!")
-words = ["computer", "keyboard!", "mouse", "Computech?", "clock", "glasses", "books", "microwave", "flag", "cabinet",
-         "camouflage"]
+words = ["ComputeR", "KEYboard"," Mouse", "Computech?", "ClocK", "glasses", "books", "microwave", "flag", "cabinet",
+         "CamouflagE"]
 guesses = 8
 list_of_letters = string.ascii_letters
 
 output = []
 word_selection = random.choice(words)
-word_selection = "Pizza."
 word_list = list(word_selection)
 length = len(word_selection)
 punctuation = string.punctuation
 list_of_punctuation = list(punctuation)
-# print(word_selection)
+print(word_selection)
 for i in range(length):
-    output.append("_ ")
+    output.append("* ")
 
 for i in range(length):
     for j in range(len(list_of_punctuation)):
@@ -36,6 +35,7 @@ while guesses > 0 and len(word_list) > 0:
             if word_selection[i].lower() == user_guess.lower():
                 output.pop(i)
                 output.insert(i, word_selection[i])
+                word_list.pop(i + 1)
         print("".join(output))
     else:
         print("You got it wrong!")
