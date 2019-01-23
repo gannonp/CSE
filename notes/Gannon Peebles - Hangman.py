@@ -9,6 +9,7 @@ list_of_letters = string.ascii_letters
 output = []
 word_selection = random.choice(words)
 word_list = list(word_selection)
+word_list1 = list(word_selection)
 length = len(word_selection)
 punctuation = string.punctuation
 list_of_punctuation = list(punctuation)
@@ -34,8 +35,8 @@ while guesses > 0 and len(word_list) > 0:
         for i in range(len(word_selection)):
             if word_selection[i].lower() == user_guess.lower():
                 output.pop(i)
-                output.insert(i, word_selection[i])
-                word_list.pop(i + 1)
+                output.insert(i, word_list1[i])
+                word_list.pop(i)
         print("".join(output))
     else:
         print("You got it wrong!")
