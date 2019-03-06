@@ -122,7 +122,7 @@ For loops - Use when you know EXACTLY how many iterations
 While loops - Use when you DON'T know how many iterations
 """
 
-# Control Structueres (If Statements)
+# Control Structures (If Statements)
 sunny = False
 if sunny:
     print("Go outside")
