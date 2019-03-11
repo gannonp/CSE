@@ -97,4 +97,36 @@ class DeathPotion(Consumable):
         super(DeathPotion, self).__init__("Death Potion", -1000)
 
 
-class
+class Animal(Item):
+    def __init__(self, name):
+        super(Animal, self).__init__('name')
+
+
+class CrazyDog(Animal):
+    def __init__(self):
+        super(CrazyDog, self).__init__("Crazy Dog")
+
+
+class GoldenUnicorn(Animal):
+    def __init__(self):
+        super(GoldenUnicorn, self).__init__("Golden Unicorn")
+
+
+class GiantBird(Animal):
+    def __init__(self):
+        super(GiantBird, self).__init__("Giant Bird")
+
+
+class Technology(Item):
+    def __init__(self, name):
+        super(Technology, self).__init__(name)
+
+
+class Computer(Technology):
+    def __init__(self):
+        super(Computer, self).__init__("Computer")
+
+
+class Phone(Technology):
+    def __init__(self):
+        super(Phone, self).__init__("Phone")
