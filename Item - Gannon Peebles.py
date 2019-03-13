@@ -130,3 +130,37 @@ class Computer(Technology):
 class Phone(Technology):
     def __init__(self):
         super(Phone, self).__init__("Phone")
+
+
+class Armor(Item):
+    def __init__(self, name, armor_amt: int):
+        super(Armor, self).__init__(name)
+        self.armor_amt = armor_amt
+
+
+class Character(object):
+    def __init__(self, name, health: int, weapon, armor_amt):
+        self.name = name
+        self.health = health
+        self.weapon = weapon
+        self.armor = armor_amt
+
+    def take_damage(self, damage: int):
+        if self.armor.armor_amt > damage:
+            print("No damage is done because of your amazing armor!")
+        else:
+            self.health -= damage - self.armor.armor_amt
+        print("%s has %d health left" % (self.name, self.health))
+
+    def attack(self, target):
+        print("%s attacks %s for %d damage" % (self.name, target.name, self.weapon.damage))
+        target.take_damage(self.weapon.damage)
+
+
+orc = Character("Orc", 100, Scar(), Armor("Generic Armor", 50))
+demon = Character("Demon", 300, Revolver(), Armor("armor 2", 25))
+
+orc.attack(demon)
+demon.attack(orc)
+demon.attack(orc)
+orc.attack(demon)

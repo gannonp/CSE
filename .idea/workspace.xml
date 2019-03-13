@@ -11,6 +11,7 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/CSE$Dictionary_Notes.coverage" NAME="Dictionary Notes Coverage Results" MODIFIED="1549386197348" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CSE$Object_Assignment___Gannon_Peebles.coverage" NAME="Object Assignment - Gannon Peebles Coverage Results" MODIFIED="1550683721526" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/CSE$Item___Gannon_Peebles.coverage" NAME="Item - Gannon Peebles Coverage Results" MODIFIED="1552495409484" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CSE$Semester_2_Notes.coverage" NAME="Semester 2 Notes Coverage Results" MODIFIED="1547572189711" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CSE$Object_Notes___Gannon_Peebles.coverage" NAME="Object Notes - Gannon Peebles Coverage Results" MODIFIED="1550165213923" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CSE$Semseter_2_Adventure_Game___Gannon_Peebles.coverage" NAME="Semseter 2 Adventure Game - Gannon Peebles Coverage Results" MODIFIED="1549993016620" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -18,7 +19,7 @@
     <SUITE FILE_PATH="coverage/CSE$Dictionary_World_Map___Gannon_Peebles.coverage" NAME="Dictionary World Map - Gannon Peebles Coverage Results" MODIFIED="1549044731459" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CSE$GOD.coverage" NAME="GOD Coverage Results" MODIFIED="1549560530567" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CSE$Special_Random.coverage" NAME="Special_Random Coverage Results" MODIFIED="1550079089376" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/CSE$World_Map_OOP___Gannon_Peebles.coverage" NAME="World Map OOP - Gannon Peebles Coverage Results" MODIFIED="1552321510463" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/CSE$World_Map_OOP___Gannon_Peebles.coverage" NAME="World Map OOP - Gannon Peebles Coverage Results" MODIFIED="1552494835699" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -38,7 +39,7 @@
     <session id="-1948587980">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="42" />
+          <entry key="project.closed" value="43" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.12" value="4" />
           <entry key="project.open.time.13" value="6" />
@@ -46,7 +47,7 @@
           <entry key="project.open.time.15" value="4" />
           <entry key="project.open.time.16" value="2" />
           <entry key="project.open.time.17" value="4" />
-          <entry key="project.open.time.18" value="2" />
+          <entry key="project.open.time.18" value="3" />
           <entry key="project.open.time.19" value="1" />
           <entry key="project.open.time.21" value="1" />
           <entry key="project.open.time.22" value="1" />
@@ -65,7 +66,7 @@
           <entry key="project.open.time.63" value="2" />
           <entry key="project.open.time.65" value="1" />
           <entry key="project.open.time.66" value="1" />
-          <entry key="project.opened" value="44" />
+          <entry key="project.opened" value="45" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -81,13 +82,13 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="19" />
-          <entry key="py" value="20070" />
+          <entry key="py" value="20973" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="19" />
-          <entry key="Python" value="20070" />
+          <entry key="Python" value="20973" />
         </counts>
       </usages-collector>
     </session>
@@ -142,8 +143,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Item - Gannon Peebles.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="356">
-              <caret line="95" column="9" selection-start-line="95" selection-start-column="9" selection-end-line="95" selection-end-column="9" />
+            <state relative-caret-position="178">
+              <caret line="155" column="10" lean-forward="true" selection-start-line="155" selection-start-column="8" selection-end-line="155" selection-end-column="13" />
               <folding>
                 <element signature="e#58#74#0" />
                 <element signature="e#100#253#0" />
@@ -167,27 +168,36 @@
                 <element signature="e#2112#2163#0" />
                 <element signature="e#2229#2285#0" />
                 <element signature="e#2346#2380#0" />
-                <element signature="e#2413#2484#0" />
-                <element signature="e#2548#2601#0" />
-                <marker date="1552408726465" expanded="false" signature="19:24" ph="..." />
-                <marker date="1552408726465" expanded="true" signature="95:256" ph="..." />
-                <marker date="1552408726465" expanded="false" signature="272:277" ph="..." />
-                <marker date="1552408726465" expanded="false" signature="662:667" ph="..." />
-                <marker date="1552408726465" expanded="false" signature="790:795" ph="..." />
-                <marker date="1552408726465" expanded="false" signature="925:930" ph="..." />
-                <marker date="1552408726465" expanded="false" signature="1029:1034" ph="..." />
-                <marker date="1552408726465" expanded="false" signature="1347:1352" ph="..." />
-                <marker date="1552408726465" expanded="false" signature="1628:1633" ph="..." />
-                <marker date="1552408726465" expanded="false" signature="1734:1739" ph="..." />
-                <marker date="1552408726465" expanded="false" signature="1854:1859" ph="..." />
-                <marker date="1552408726465" expanded="false" signature="2079:2084" ph="..." />
-                <marker date="1552408726465" expanded="false" signature="2196:2201" ph="..." />
-                <marker date="1552408726465" expanded="false" signature="2307:2312" ph="..." />
-                <marker date="1552408726465" expanded="false" signature="2513:2518" ph="..." />
-                <marker date="1552408726465" expanded="false" signature="2626:2631" ph="..." />
-                <marker date="1552408726465" expanded="false" signature="2730:2735" ph="..." />
-                <marker date="1552408726465" expanded="false" signature="2837:2842" ph="..." />
-                <marker date="1552408726465" expanded="false" signature="2939:2944" ph="..." />
+                <element signature="e#2411#2482#0" />
+                <element signature="e#2439#2482#0" />
+                <element signature="e#2546#2599#0" />
+                <element signature="e#2659#2704#0" />
+                <element signature="e#2769#2807#0" />
+                <element signature="e#2870#2912#0" />
+                <element signature="e#2972#3008#0" />
+                <element signature="e#3034#3152#0" />
+                <element signature="e#3084#3152#0" />
+                <marker date="1552495409390" expanded="false" signature="19:24" ph="..." />
+                <marker date="1552495409390" expanded="true" signature="95:256" ph="..." />
+                <marker date="1552495409390" expanded="false" signature="272:277" ph="..." />
+                <marker date="1552495409390" expanded="false" signature="662:667" ph="..." />
+                <marker date="1552495409390" expanded="false" signature="790:795" ph="..." />
+                <marker date="1552495409390" expanded="false" signature="925:930" ph="..." />
+                <marker date="1552495409390" expanded="false" signature="1029:1034" ph="..." />
+                <marker date="1552495409390" expanded="false" signature="1347:1352" ph="..." />
+                <marker date="1552495409390" expanded="false" signature="1628:1633" ph="..." />
+                <marker date="1552495409390" expanded="false" signature="1734:1739" ph="..." />
+                <marker date="1552495409390" expanded="false" signature="1854:1859" ph="..." />
+                <marker date="1552495409390" expanded="false" signature="2079:2084" ph="..." />
+                <marker date="1552495409390" expanded="false" signature="2196:2201" ph="..." />
+                <marker date="1552495409390" expanded="false" signature="2307:2312" ph="..." />
+                <marker date="1552495409390" expanded="false" signature="2513:2518" ph="..." />
+                <marker date="1552495409390" expanded="false" signature="2626:2631" ph="..." />
+                <marker date="1552495409390" expanded="false" signature="2730:2735" ph="..." />
+                <marker date="1552495409390" expanded="false" signature="2837:2842" ph="..." />
+                <marker date="1552495409390" expanded="false" signature="2939:2944" ph="..." />
+                <marker date="1552495409390" expanded="true" signature="3029:3155" ph="..." />
+                <marker date="1552495409390" expanded="true" signature="3179:3184" ph="..." />
               </folding>
             </state>
           </provider>
@@ -259,7 +269,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -271,6 +280,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -290,7 +300,29 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.World Map OOP - Gannon Peebles">
+  <component name="RunManager" selected="Python.Item - Gannon Peebles">
+    <configuration name="Item - Gannon Peebles" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="CSE" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Item - Gannon Peebles.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="Object Assignment - Gannon Peebles" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="CSE" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -327,28 +359,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Object Notes - Gannon Peebles.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Semseter 2 Adventure Game - Gannon Peebles" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="CSE" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/World Map Dictionary - Gannon Peebles.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -402,19 +412,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.Semseter 2 Adventure Game - Gannon Peebles" />
       <item itemvalue="Python.Object Notes - Gannon Peebles" />
       <item itemvalue="Python.Special_Random" />
       <item itemvalue="Python.Object Assignment - Gannon Peebles" />
       <item itemvalue="Python.World Map OOP - Gannon Peebles" />
+      <item itemvalue="Python.Item - Gannon Peebles" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Item - Gannon Peebles" />
         <item itemvalue="Python.World Map OOP - Gannon Peebles" />
         <item itemvalue="Python.Object Assignment - Gannon Peebles" />
         <item itemvalue="Python.Object Notes - Gannon Peebles" />
         <item itemvalue="Python.Special_Random" />
-        <item itemvalue="Python.Semseter 2 Adventure Game - Gannon Peebles" />
       </list>
     </recent_temporary>
   </component>
@@ -437,11 +447,11 @@
     <layout>
       <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="1" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.41452345" />
+      <window_info content_ui="combo" id="Project" order="2" visible="true" weight="0.42133132" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924356" weight="0.29508197" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39934534" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49924356" visible="true" weight="0.29508197" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39836067" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -486,6 +496,15 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <default-breakpoints>
+        <breakpoint suspend="NONE" type="python-exception">
+          <properties exception="BaseException" />
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Semseter 2 Adventure Game - Gannon Peebles.py" />
@@ -597,8 +616,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Item - Gannon Peebles.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="95" column="9" selection-start-line="95" selection-start-column="9" selection-end-line="95" selection-end-column="9" />
+        <state relative-caret-position="178">
+          <caret line="155" column="10" lean-forward="true" selection-start-line="155" selection-start-column="8" selection-end-line="155" selection-end-column="13" />
           <folding>
             <element signature="e#58#74#0" />
             <element signature="e#100#253#0" />
@@ -622,27 +641,36 @@
             <element signature="e#2112#2163#0" />
             <element signature="e#2229#2285#0" />
             <element signature="e#2346#2380#0" />
-            <element signature="e#2413#2484#0" />
-            <element signature="e#2548#2601#0" />
-            <marker date="1552408726465" expanded="false" signature="19:24" ph="..." />
-            <marker date="1552408726465" expanded="true" signature="95:256" ph="..." />
-            <marker date="1552408726465" expanded="false" signature="272:277" ph="..." />
-            <marker date="1552408726465" expanded="false" signature="662:667" ph="..." />
-            <marker date="1552408726465" expanded="false" signature="790:795" ph="..." />
-            <marker date="1552408726465" expanded="false" signature="925:930" ph="..." />
-            <marker date="1552408726465" expanded="false" signature="1029:1034" ph="..." />
-            <marker date="1552408726465" expanded="false" signature="1347:1352" ph="..." />
-            <marker date="1552408726465" expanded="false" signature="1628:1633" ph="..." />
-            <marker date="1552408726465" expanded="false" signature="1734:1739" ph="..." />
-            <marker date="1552408726465" expanded="false" signature="1854:1859" ph="..." />
-            <marker date="1552408726465" expanded="false" signature="2079:2084" ph="..." />
-            <marker date="1552408726465" expanded="false" signature="2196:2201" ph="..." />
-            <marker date="1552408726465" expanded="false" signature="2307:2312" ph="..." />
-            <marker date="1552408726465" expanded="false" signature="2513:2518" ph="..." />
-            <marker date="1552408726465" expanded="false" signature="2626:2631" ph="..." />
-            <marker date="1552408726465" expanded="false" signature="2730:2735" ph="..." />
-            <marker date="1552408726465" expanded="false" signature="2837:2842" ph="..." />
-            <marker date="1552408726465" expanded="false" signature="2939:2944" ph="..." />
+            <element signature="e#2411#2482#0" />
+            <element signature="e#2439#2482#0" />
+            <element signature="e#2546#2599#0" />
+            <element signature="e#2659#2704#0" />
+            <element signature="e#2769#2807#0" />
+            <element signature="e#2870#2912#0" />
+            <element signature="e#2972#3008#0" />
+            <element signature="e#3034#3152#0" />
+            <element signature="e#3084#3152#0" />
+            <marker date="1552495409390" expanded="false" signature="19:24" ph="..." />
+            <marker date="1552495409390" expanded="true" signature="95:256" ph="..." />
+            <marker date="1552495409390" expanded="false" signature="272:277" ph="..." />
+            <marker date="1552495409390" expanded="false" signature="662:667" ph="..." />
+            <marker date="1552495409390" expanded="false" signature="790:795" ph="..." />
+            <marker date="1552495409390" expanded="false" signature="925:930" ph="..." />
+            <marker date="1552495409390" expanded="false" signature="1029:1034" ph="..." />
+            <marker date="1552495409390" expanded="false" signature="1347:1352" ph="..." />
+            <marker date="1552495409390" expanded="false" signature="1628:1633" ph="..." />
+            <marker date="1552495409390" expanded="false" signature="1734:1739" ph="..." />
+            <marker date="1552495409390" expanded="false" signature="1854:1859" ph="..." />
+            <marker date="1552495409390" expanded="false" signature="2079:2084" ph="..." />
+            <marker date="1552495409390" expanded="false" signature="2196:2201" ph="..." />
+            <marker date="1552495409390" expanded="false" signature="2307:2312" ph="..." />
+            <marker date="1552495409390" expanded="false" signature="2513:2518" ph="..." />
+            <marker date="1552495409390" expanded="false" signature="2626:2631" ph="..." />
+            <marker date="1552495409390" expanded="false" signature="2730:2735" ph="..." />
+            <marker date="1552495409390" expanded="false" signature="2837:2842" ph="..." />
+            <marker date="1552495409390" expanded="false" signature="2939:2944" ph="..." />
+            <marker date="1552495409390" expanded="true" signature="3029:3155" ph="..." />
+            <marker date="1552495409390" expanded="true" signature="3179:3184" ph="..." />
           </folding>
         </state>
       </provider>
