@@ -146,21 +146,33 @@ class Character(object):
         self.armor = armor_amt
 
     def take_damage(self, damage: int):
-        if self.armor.armor_amt > damage:
-            print("No damage is done because of your amazing armor!")
-        else:
-            self.health -= damage - self.armor.armor_amt
-        print("%s has %d health left" % (self.name, self.health))
+            self.health -= damage
+        print("%s has %d health left" % (player.name, player.health))
 
     def attack(self, target):
         print("%s attacks %s for %d damage" % (self.name, target.name, self.weapon.damage))
         target.take_damage(self.weapon.damage)
 
+    def consume(self, player, consumable):
+        player.health += consumable.health_added
+        if self.health <= 0:
+            player.health = 0
+        print("%s consumed %s and %s now has %d health" % (self.name, consumable.name, player.name, player.health))
+        if self.health <= 0:
+            print("You died")
+            return
+        if self.health >= 500:
+            player.health = 500
+            print("%s has max health, 500!" % player.name)
 
-orc = Character("Orc", 100, Scar(), Armor("Generic Armor", 50))
-demon = Character("Demon", 300, Revolver(), Armor("armor 2", 25))
 
+orc = Character("Orc", 100, Scar())
+demon = Character("Demon", 300, Revolver())
+
+orc.consume(orc, GoldenApple())
 orc.attack(demon)
 demon.attack(orc)
 demon.attack(orc)
 orc.attack(demon)
+demon.consume(demon, GoldenApple())
+orc.consume(orc, HealthPotion())
