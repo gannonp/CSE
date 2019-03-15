@@ -132,22 +132,15 @@ class Phone(Technology):
         super(Phone, self).__init__("Phone")
 
 
-class Armor(Item):
-    def __init__(self, name, armor_amt: int):
-        super(Armor, self).__init__(name)
-        self.armor_amt = armor_amt
-
-
 class Character(object):
-    def __init__(self, name, health: int, weapon, armor_amt):
+    def __init__(self, name, health: int, weapon):
         self.name = name
         self.health = health
         self.weapon = weapon
-        self.armor = armor_amt
 
     def take_damage(self, damage: int):
-            self.health -= damage
-        print("%s has %d health left" % (player.name, player.health))
+        self.health -= damage
+        print("%s has %d health left" % (self.name, self.health))
 
     def attack(self, target):
         print("%s attacks %s for %d damage" % (self.name, target.name, self.weapon.damage))
