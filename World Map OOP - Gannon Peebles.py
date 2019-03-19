@@ -196,17 +196,17 @@ class Character(object):
         print("%s attacks %s for %d damage" % (self.name, target.name, self.weapon.damage))
         target.take_damage(self.weapon.damage)
 
-    def consume(self, player, consumable):
+    def consume(self, consumable):
         player.health += consumable.health_added
         if self.health <= 0:
             player.health = 0
-        print("%s consumed %s and %s now has %d health" % (self.name, consumable.name, player.name, player.health))
+        print("%s consumed %s and %s now has %d health" % (self.name, consumable.name, self.name, self.health))
         if self.health <= 0:
             print("You died")
             return
         if self.health >= 500:
             player.health = 500
-            print("%s has max health, 500!" % player.name)
+            print("%s has max health, 500!" % player)
 
 
 revolver = Revolver()
@@ -289,7 +289,6 @@ closet = Room('The Closet', None, 'blue_store', None, None, None, None, "You are
 dark_room_2 = Room('The Second Dark Room', None, None, None, 'dark_hallway', None, None, "You are inside a pitch black "
                                                                                          "room and to the west is a "
                                                                                          "dark hallway.")
-
 
 player = Player(blue_store)
 
