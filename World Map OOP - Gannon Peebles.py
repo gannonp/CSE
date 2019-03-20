@@ -40,6 +40,18 @@ class Player(object):
         name_of_room = getattr(self.current_location, direction)
         return globals()[name_of_room]
 
+    def consume(self, consumable):
+        player.health += consumable.health_added
+        if self.health <= 0:
+            player.health = 0
+        print("%s consumed %s and %s now has %d health" % (player, consumable.name, player, self.health))
+        if self.health <= 0:
+            print("You died")
+            return
+        if self.health >= 500:
+            player.health = 500
+            print("%s has max health, 500!" % player)
+
 
 class Demon(object):
     def __init__(self, health):
@@ -307,6 +319,8 @@ while playing:
             player.move(next_room)
         except KeyError:
             print("I can't go that way")
+    elif "consume" in command:
+        player.consume(self.item)
     else:
         print("Command Not Found")
     if not playing:
