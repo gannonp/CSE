@@ -295,7 +295,7 @@ locked_door = Room('The Locked Door', None, None, 'dark_hallway', 'money_room', 
                                                                                             "it.")
 money_room = Room('The Money Room', None, None, 'locked_door', None, None, None, "There is money everywhere and you "
                                                                                  "need to go back to the "
-                                                                                 "store to buy a rifle.")
+                                                                                 "store to buy a rifle.", phone)
 closet = Room('The Closet', None, 'blue_store', None, None, None, None, "You are inside the closet and "
                                                                         "need to collect the flashlight and key.")
 dark_room_2 = Room('The Second Dark Room', None, None, None, 'dark_hallway', None, None, "You are inside a pitch black "
@@ -320,7 +320,7 @@ while playing:
         except KeyError:
             print("I can't go that way")
     elif "consume" in command:
-        player.consume(self.item)
+        player.consume(player.current_location.item)
     else:
         print("Command Not Found")
     if not playing:
