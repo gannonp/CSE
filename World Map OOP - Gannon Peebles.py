@@ -22,6 +22,7 @@ class Player(object):
         self.current_location = starting_location
         self.inventory = []
         self.health = 100
+        self.name = "you"
 
     def move(self, new_location):
         # This moves the player the player to a new room
@@ -44,7 +45,7 @@ class Player(object):
         player.health += consumable.health_added
         if self.health <= 0:
             player.health = 0
-        print("%s consumed %s and %s now has %d health" % (player, consumable.name, player, self.health))
+        print("%s consumed %s and %s now have %d health" % (player.name, consumable.name, player.name, self.health))
         if self.health <= 0:
             print("You died")
             return
@@ -267,9 +268,10 @@ police_station = Room('The Police Station', 'blue_store', 'jail', 'outside_home'
                                                                                                     "officer is giving "
                                                                                                     "you a ride home, "
                                                                                                     "go east to get in "
-                                                                                                    "the car")
+                                                                                                    "the car",
+                      healthy_berry)
 jail = Room('The Jail', 'police_station', None, None, None, None, None, "You are in jail and lost all your items "
-                                                                        "and money")
+                                                                        "and money", rat_poison)
 outside_home = Room('Outside The House', None, None, 'inside_home', None, None, None, "You are outside of your house, "
                                                                                       "the door is on the east")
 inside_home = Room('Inside The House', 'dark_room', 'kitchen', 'locked_room', None, None, None, "You are inside of "
@@ -282,7 +284,7 @@ inside_home = Room('Inside The House', 'dark_room', 'kitchen', 'locked_room', No
                                                                                                 ", and a kitchen to "
                                                                                                 "the south")
 kitchen = Room('The Kitchen', 'inside_home', 'outside_home', None, None, None, None, "You are in the kitchen and there "
-                                                                                     "is a knife on the counter")
+                                                                                     "is a knife on the counter", apple)
 locked_room = Room('The Locked Room', None, 'dark_room_2', None, 'inside_home', None, None, "You are now inside the "
                                                                                             "locked room.")
 dark_room = Room('The Dark Room', None, 'inside_home', None, None, None, None, "There is no where to go.")
@@ -300,7 +302,7 @@ closet = Room('The Closet', None, 'blue_store', None, None, None, None, "You are
                                                                         "need to collect the flashlight and key.")
 dark_room_2 = Room('The Second Dark Room', None, None, None, 'dark_hallway', None, None, "You are inside a pitch black "
                                                                                          "room and to the west is a "
-                                                                                         "dark hallway.")
+                                                                                         "dark hallway.", ak47)
 
 player = Player(blue_store)
 
@@ -310,9 +312,19 @@ directions = ['north', 'south', 'east', 'west', 'up', 'down']
 while playing:
     print(player.current_location.name)
     print(player.current_location.description)
+    if player.current_location.item is not None:
+        print()
+        print("There is a %s here." % player.current_location.item.name)
     command = input("> ")
-    if command.lower() in ['q', 'quit', 'exit']:
+    if player.current_location.item is not None and command.lower() in ['pick up', 'grab']:
+        player.inventory.append(player.current_location.item.name)
+        print("Your player picked up the %s" % player.current_location.item.name.lower())
+        player.current_location.item = None
+    elif command.lower() in ['q', 'quit', 'exit']:
         playing = False
+    elif command.lower() in ['i', 'inventory']:
+        print("Your current inventory is:")
+        print(list(player.inventory))
     elif command.lower() in directions:
         try:
             next_room = player.find_next_room(command.lower())
@@ -320,8 +332,14 @@ while playing:
         except KeyError:
             print("I can't go that way")
     elif "consume" in command:
-        player.consume(player.current_location.item)
+        try:
+            player.consume(player.current_location.item)
+            player.current_location.item = None
+        except AttributeError:
+            print("You cannot consume a %s" % player.current_location.item.name)
     else:
         print("Command Not Found")
     if not playing:
+        break
+    if player.health <= 0:
         break
