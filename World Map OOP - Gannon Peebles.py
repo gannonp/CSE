@@ -18,11 +18,12 @@ class Item(object):
 
 
 class Player(object):
-    def __init__(self, starting_location):
+    def __init__(self, starting_location, weapon=None):
         self.current_location = starting_location
         self.inventory = []
         self.health = 100
         self.name = "you"
+        self.weapon = weapon
 
     def move(self, new_location):
         # This moves the player the player to a new room
@@ -53,6 +54,14 @@ class Player(object):
             player.health = 500
             print("%s has max health, 500!" % player)
 
+    def take_damage(self, damage: int):
+        self.health -= damage
+        print("%s has %d health left" % (self.name, self.health))
+
+    def attack(self, target):
+        print("%s attacks %s for %d damage" % (player.name, target.name, player.weapon.damage))
+        target.take_damage(self.weapon.damage)
+
 
 class Demon(object):
     def __init__(self, health):
@@ -63,6 +72,13 @@ class Demon(object):
         self.health = health
         if self.health <= 0:
             print("You died")
+            return
+
+    def take_damage(self, damage: int):
+        self.health -= damage
+        print("The demon has %d health left" % self.health)
+        if self.health <= 0:
+            print("The demon died")
             return
 
 
@@ -201,8 +217,8 @@ class Character(object):
         self.health = health
         self.weapon = weapon
 
-    def take_damage(self, damage: int):
-        self.health -= damage
+    def take_damage(self):
+        self.health -= player.weapon.damage
         print("%s has %d health left" % (self.name, self.health))
 
     def attack(self, target):
@@ -213,13 +229,18 @@ class Character(object):
         player.health += consumable.health_added
         if self.health <= 0:
             player.health = 0
-        print("%s consumed %s and %s now has %d health" % (self.name, consumable.name, self.name, self.health))
+        print("%s consumed %s and %s now has %d health" % (self.name.upper(), consumable.name, self.name, self.health))
         if self.health <= 0:
             print("You died")
             return
         if self.health >= 500:
             player.health = 500
             print("%s has max health, 500!" % player)
+
+
+class Hands(Melee):
+    def __init__(self):
+        super(Hands, self).__init__("Hands", 20, 100)
 
 
 revolver = Revolver()
@@ -284,7 +305,7 @@ inside_home = Room('Inside The House', 'dark_room', 'kitchen', 'locked_room', No
                                                                                                 ", and a kitchen to "
                                                                                                 "the south")
 kitchen = Room('The Kitchen', 'inside_home', 'outside_home', None, None, None, None, "You are in the kitchen and there "
-                                                                                     "is a knife on the counter", apple)
+                                                                                     "is a knife on the counter", knife)
 locked_room = Room('The Locked Room', None, 'dark_room_2', None, 'inside_home', None, None, "You are now inside the "
                                                                                             "locked room.")
 dark_room = Room('The Dark Room', None, 'inside_home', None, None, None, None, "There is no where to go.")
@@ -308,13 +329,19 @@ player = Player(blue_store)
 
 playing = True
 directions = ['north', 'south', 'east', 'west', 'up', 'down']
+deal_damage = True
 
 while playing:
+    if deal_damage:
+        print('\033[4m' + "A demon is always following you, he has 300 health, he only attacks when you "
+              "enter the wrong room, "
+              "he deals "
+              "25 damage each time" + '\033[1m')
+    deal_damage = False
     print(player.current_location.name)
     print(player.current_location.description)
     if player.current_location.item is not None:
-        print()
-        print("There is a %s here." % player.current_location.item.name)
+        print("There is a %s here." % player.current_location.item.name.lower())
     command = input("> ")
     if player.current_location.item is not None and command.lower() in ['pick up', 'grab']:
         player.inventory.append(player.current_location.item.name)
@@ -325,6 +352,12 @@ while playing:
     elif command.lower() in ['i', 'inventory']:
         print("Your current inventory is:")
         print(list(player.inventory))
+    elif command.lower() in ['a', 'attack', 'fight', 'kill']:
+        try:
+            player.weapon = Hands()
+            demon.take_damage()
+        except AttributeError:
+            print("There is no one to attack")
     elif command.lower() in directions:
         try:
             next_room = player.find_next_room(command.lower())
@@ -336,7 +369,7 @@ while playing:
             player.consume(player.current_location.item)
             player.current_location.item = None
         except AttributeError:
-            print("You cannot consume a %s" % player.current_location.item.name)
+            print("You cannot consume a %s" % player.current_location.item.name.lower())
     else:
         print("Command Not Found")
     if not playing:
