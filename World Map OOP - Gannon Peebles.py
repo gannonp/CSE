@@ -10,6 +10,7 @@ class Room(object):
         self.description = description
         self.characters = []
         self.item = item
+        self.enemy = []
 
 
 class Item(object):
@@ -305,7 +306,7 @@ inside_home = Room('Inside The House', 'dark_room', 'kitchen', 'locked_room', No
                                                                                                 ", and a kitchen to "
                                                                                                 "the south")
 kitchen = Room('The Kitchen', 'inside_home', 'outside_home', None, None, None, None, "You are in the kitchen and there "
-                                                                                     "is a knife on the counter", knife)
+                                                                                     "is a burst on the counter", burst)
 locked_room = Room('The Locked Room', None, 'dark_room_2', None, 'inside_home', None, None, "You are now inside the "
                                                                                             "locked room.")
 dark_room = Room('The Dark Room', None, 'inside_home', None, None, None, None, "There is no where to go.")
@@ -364,7 +365,7 @@ while playing:
             player.move(next_room)
         except KeyError:
             print("I can't go that way")
-    elif "consume" in command:
+    elif 'consume' or 'eat' in command:
         try:
             player.consume(player.current_location.item)
             player.current_location.item = None
