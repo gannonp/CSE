@@ -1,5 +1,5 @@
 class Room(object):
-    def __init__(self, name, north, south, east, west, up, down, description, item=None):
+    def __init__(self, name, north, south, east, west, up, down, description, item=None, animal=None):
         self.north = north
         self.south = south
         self.east = east
@@ -11,6 +11,7 @@ class Room(object):
         self.characters = []
         self.item = item
         self.enemy = []
+        self.animal = animal
 
 
 class Item(object):
@@ -25,6 +26,13 @@ class Player(object):
         self.health = 100
         self.name = "you"
         self.weapon = weapon
+
+    def ride(self, animal):
+        if player.current_location.animal is not None:
+            print("You are riding a %s, this has no effect on the game play." % animal)
+        else:
+            print("There is nothing to ride")
+            pass
 
     def move(self, new_location):
         # This moves the player the player to a new room
@@ -282,7 +290,8 @@ ware_house = Room('The Ware House', None, None, None, None, None, 'blue_store', 
                   apple)
 street = Room('The Street', None, None, None, 'blue_store', None, None, "You are on the street and someone is "
                                                                         "attacking you", death_potion)
-registers = Room('The Registers', None, None, 'blue_store', None, None, None, "You are next to the registers.")
+registers = Room('The Registers', None, None, 'blue_store', None, None, None, "You are next to the registers.",
+                 golden_unicorn)
 police_station = Room('The Police Station', 'blue_store', 'jail', 'outside_home', None, None, None, "You are inside "
                                                                                                     "the "
                                                                                                     "police station "
@@ -295,7 +304,8 @@ police_station = Room('The Police Station', 'blue_store', 'jail', 'outside_home'
 jail = Room('The Jail', 'police_station', None, None, None, None, None, "You are in jail and lost all your items "
                                                                         "and money", rat_poison)
 outside_home = Room('Outside The House', None, None, 'inside_home', None, None, None, "You are outside of your house, "
-                                                                                      "the door is on the east")
+                                                                                      "the door is on the east",
+                    crazy_dog)
 inside_home = Room('Inside The House', 'dark_room', 'kitchen', 'locked_room', None, None, None, "You are inside of "
                                                                                                 "your house, "
                                                                                                 "there is a dark room "
@@ -304,7 +314,8 @@ inside_home = Room('Inside The House', 'dark_room', 'kitchen', 'locked_room', No
                                                                                                 "locked room "
                                                                                                 "to the east"
                                                                                                 ", and a kitchen to "
-                                                                                                "the south")
+                                                                                                "the south",
+                   blue_gold_fish)
 kitchen = Room('The Kitchen', 'inside_home', 'outside_home', None, None, None, None, "You are in the kitchen and there "
                                                                                      "is a burst on the counter", burst)
 locked_room = Room('The Locked Room', None, 'dark_room_2', None, 'inside_home', None, None, "You are now inside the "
@@ -343,6 +354,8 @@ while playing:
     print(player.current_location.description)
     if player.current_location.item is not None:
         print("There is a %s here." % player.current_location.item.name.lower())
+    if player.current_location.animal is not None:
+        print("There is a %s here." % player.current_location.animal.name.lower())
     command = input("> ")
     if player.current_location.item is not None and command.lower() in ['pick up', 'grab']:
         player.inventory.append(player.current_location.item.name)
@@ -365,6 +378,9 @@ while playing:
             player.move(next_room)
         except KeyError:
             print("I can't go that way")
+    elif 'ride' or 'hop on' in command:
+            player.ride(player.current_location.animal)
+            player.current_location.animal = None
     elif 'consume' or 'eat' in command:
         try:
             player.consume(player.current_location.item)
