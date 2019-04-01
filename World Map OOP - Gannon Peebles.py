@@ -378,15 +378,12 @@ while playing:
             player.move(next_room)
         except KeyError:
             print("I can't go that way")
-    elif 'ride' or 'hop on' in command:
-            player.ride(player.current_location.animal)
-            player.current_location.animal = None
     elif 'consume' or 'eat' in command:
         try:
             player.consume(player.current_location.item)
             player.current_location.item = None
         except AttributeError:
-            print("You cannot consume a %s" % player.current_location.item.name.lower())
+            print("Command Not Found")
     else:
         print("Command Not Found")
     if not playing:
