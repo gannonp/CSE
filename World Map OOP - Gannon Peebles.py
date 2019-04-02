@@ -27,13 +27,6 @@ class Player(object):
         self.name = "you"
         self.weapon = weapon
 
-    def ride(self, animal):
-        if player.current_location.animal is not None:
-            print("You are riding a %s, this has no effect on the game play." % animal)
-        else:
-            print("There is nothing to ride")
-            pass
-
     def move(self, new_location):
         # This moves the player the player to a new room
         """
@@ -306,20 +299,21 @@ jail = Room('The Jail', 'police_station', None, None, None, None, None, "You are
 outside_home = Room('Outside The House', None, None, 'inside_home', None, None, None, "You are outside of your house, "
                                                                                       "the door is on the east",
                     crazy_dog)
-inside_home = Room('Inside The House', 'dark_room', 'kitchen', 'locked_room', None, None, None, "You are inside of "
-                                                                                                "your house, "
-                                                                                                "there is a dark room "
-                                                                                                "to "
-                                                                                                "the north, a "
-                                                                                                "locked room "
-                                                                                                "to the east"
-                                                                                                ", and a kitchen to "
-                                                                                                "the south",
+inside_home = Room('Inside The House', 'dark_room', 'kitchen', 'unlocked_room', None, None, None, "You are inside of "
+                                                                                                  "your house, "
+                                                                                                  "there is a dark"
+                                                                                                  " room "
+                                                                                                  "to "
+                                                                                                  "the north, a "
+                                                                                                  "locked room "
+                                                                                                  "to the east"
+                                                                                                  ", and a kitchen to "
+                                                                                                  "the south",
                    blue_gold_fish)
 kitchen = Room('The Kitchen', 'inside_home', 'outside_home', None, None, None, None, "You are in the kitchen and there "
                                                                                      "is a burst on the counter", burst)
-locked_room = Room('The Locked Room', None, 'dark_room_2', None, 'inside_home', None, None, "You are now inside the "
-                                                                                            "locked room.")
+unlocked_room = Room('The Locked Room', None, 'dark_room_2', None, 'inside_home', None, None, "You are now inside the "
+                                                                                              "unlocked room.")
 dark_room = Room('The Dark Room', None, 'inside_home', None, None, None, None, "There is no where to go.")
 dark_hallway = Room('The Dark Hallway', None, None, 'dark_room_2', 'locked_door', None, None, "You are inside a dark "
                                                                                               "hallway that stretches "
@@ -389,4 +383,9 @@ while playing:
     if not playing:
         break
     if player.health <= 0:
+        print("You died")
+        break
+    if player.current_location == street:
+        print("There is a hobo attacking you")
+        print("You died")
         break
