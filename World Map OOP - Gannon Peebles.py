@@ -351,10 +351,14 @@ while playing:
     if player.current_location.animal is not None:
         print("There is a %s here." % player.current_location.animal.name.lower())
     command = input("> ")
-    if player.current_location.item is not None and command.lower() in ['pick up', 'grab']:
-        player.inventory.append(player.current_location.item.name)
-        print("Your player picked up the %s" % player.current_location.item.name.lower())
-        player.current_location.item = None
+    if player.current_location.item is not None and 'pick up' or 'grab' in command.lower():
+        try:
+            player.inventory.append(player.current_location.item.name)
+            print("Your player picked up the %s" % player.current_location.item.name.lower())
+            player.current_location.item = None
+        except AttributeError:
+            print("You cannot pick this up")
+            pass
     elif command.lower() in ['q', 'quit', 'exit']:
         playing = False
     elif command.lower() in ['i', 'inventory']:
@@ -372,7 +376,7 @@ while playing:
             player.move(next_room)
         except KeyError:
             print("I can't go that way")
-    elif 'consume' or 'eat' in command:
+    elif 'consume' or 'eat' in command and player.current_location.item is food:
         try:
             player.consume(player.current_location.item)
             player.current_location.item = None
