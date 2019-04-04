@@ -64,6 +64,14 @@ class Player(object):
         print("%s attacks %s for %d damage" % (player.name, target.name, player.weapon.damage))
         target.take_damage(self.weapon.damage)
 
+    def turn_on(self):
+        print("Your player turned on the flashlight and it gave you extra vision, you got 5 health added.")
+        player.health += 5
+
+    def turn_off(self):
+        print("Your player turned off the flashlight and it took your extra vision, you lost 5 health.")
+        player.health -= 5
+
 
 class Demon(object):
     def __init__(self, health):
@@ -245,6 +253,11 @@ class Hands(Melee):
         super(Hands, self).__init__("Hands", 20, 100)
 
 
+class Flashlight(Item):
+    def __init__(self):
+        super(Flashlight, self).__init__("Flashlight")
+
+
 revolver = Revolver()
 ak47 = AK47()
 scar = Scar()
@@ -263,6 +276,7 @@ computer = Computer()
 phone = Phone()
 blue_gold_fish = Character("Blue Goldfish", 100, Burst)
 demon = Character("Demon", 300, Revolver)
+flashlight = Flashlight()
 
 blue_store = Room('The Blue Store', 'closet', 'police_station', 'street', 'registers', 'ware_house', None, "This is "
                                                                                                            "the "
@@ -325,8 +339,7 @@ locked_door = Room('The Locked Door', None, None, 'dark_hallway', 'money_room', 
 money_room = Room('The Money Room', None, None, 'locked_door', None, None, None, "There is money everywhere and you "
                                                                                  "need to go back to the "
                                                                                  "store to buy a rifle.", phone)
-closet = Room('The Closet', None, 'blue_store', None, None, None, None, "You are inside the closet and "
-                                                                        "need to collect the flashlight and key.")
+closet = Room('The Closet', None, 'blue_store', None, None, None, None, "You are inside the closet.", flashlight)
 dark_room_2 = Room('The Second Dark Room', None, None, None, 'dark_hallway', None, None, "You are inside a pitch black "
                                                                                          "room and to the west is a "
                                                                                          "dark hallway.", ak47)
@@ -351,7 +364,7 @@ while playing:
     if player.current_location.animal is not None:
         print("There is a %s here." % player.current_location.animal.name.lower())
     command = input("> ")
-    if player.current_location.item is not None and 'pick up' or 'grab' in command.lower():
+    if player.current_location.item is not None and ('pick up' in command.lower() or 'grab' in command.lower()):
         try:
             player.inventory.append(player.current_location.item.name)
             print("Your player picked up the %s" % player.current_location.item.name.lower())
@@ -359,6 +372,13 @@ while playing:
         except AttributeError:
             print("You cannot pick this up")
             pass
+    if flashlight in player.inventory and ('turn on' in command.lower() or 'flip on' in command.lower()):
+            player.turn_on()
+            print("Your player turned on the %s" % player.current_location.item.name.lower())
+            player.current_location.item = None
+    if flashlight not in player.inventory and ('turn on' in command.lower() or 'flip on' in command.lower()):
+        print("You don't have a flashlight")
+        pass
     elif command.lower() in ['q', 'quit', 'exit']:
         playing = False
     elif command.lower() in ['i', 'inventory']:
@@ -376,13 +396,12 @@ while playing:
             player.move(next_room)
         except KeyError:
             print("I can't go that way")
-    elif 'consume' or 'eat' in command and player.current_location.item is food:
+    elif 'consume' in command or 'eat' in command:
         try:
             player.consume(player.current_location.item)
             player.current_location.item = None
         except AttributeError:
-            print("Command Not Found")
-    else:
+            pass
         print("Command Not Found")
     if not playing:
         break
