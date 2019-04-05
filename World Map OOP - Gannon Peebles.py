@@ -366,16 +366,15 @@ while playing:
     command = input("> ")
     if player.current_location.item is not None and ('pick up' in command.lower() or 'grab' in command.lower()):
         try:
-            player.inventory.append(player.current_location.item.name)
+            player.inventory.append(player.current_location.item)
             print("Your player picked up the %s" % player.current_location.item.name.lower())
             player.current_location.item = None
         except AttributeError:
             print("You cannot pick this up")
             pass
     if flashlight in player.inventory and ('turn on' in command.lower() or 'flip on' in command.lower()):
-            player.turn_on()
-            print("Your player turned on the %s" % player.current_location.item.name.lower())
-            player.current_location.item = None
+        player.turn_on()
+        player.current_location.item = None
     if flashlight not in player.inventory and ('turn on' in command.lower() or 'flip on' in command.lower()):
         print("You don't have a flashlight")
         pass
@@ -384,6 +383,9 @@ while playing:
     elif command.lower() in ['i', 'inventory']:
         print("Your current inventory is:")
         print(list(player.inventory))
+    elif command.lower() in ['h', 'health']:
+        print("Your current health is:")
+        print(list(player.health))
     elif command.lower() in ['a', 'attack', 'fight', 'kill']:
         try:
             player.weapon = Hands()
