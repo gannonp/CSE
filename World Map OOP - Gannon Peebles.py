@@ -319,7 +319,7 @@ inside_home = Room('Inside The House', 'dark_room', 'kitchen', 'unlocked_room', 
                                                                                                   " room "
                                                                                                   "to "
                                                                                                   "the north, a "
-                                                                                                  "locked room "
+                                                                                                  "unlocked room "
                                                                                                   "to the east"
                                                                                                   ", and a kitchen to "
                                                                                                   "the south",
@@ -373,9 +373,15 @@ while playing:
             print("You cannot pick this up")
             pass
     if flashlight in player.inventory and ('turn on' in command.lower() or 'flip on' in command.lower()):
-        player.turn_on()
+        player.turn_off()
         player.current_location.item = None
     if flashlight not in player.inventory and ('turn on' in command.lower() or 'flip on' in command.lower()):
+        print("You don't have a flashlight")
+        pass
+    if flashlight in player.inventory and ('turn off' in command.lower() or 'flip off' in command.lower()):
+        player.turn_off()
+        player.current_location.item = None
+    if flashlight not in player.inventory and ('turn off' in command.lower() or 'flip off' in command.lower()):
         print("You don't have a flashlight")
         pass
     elif command.lower() in ['q', 'quit', 'exit']:
@@ -384,11 +390,11 @@ while playing:
         print("Your current inventory is:")
         print(list(player.inventory))
     elif command.lower() in ['h', 'health']:
-        print("Your current health is:")
-        print(list(player.health))
+        print("Your current health is: %d" % player.health)
     elif command.lower() in ['a', 'attack', 'fight', 'kill']:
         try:
-            player.weapon = Hands()
+            if player.weapon is None:
+                player.weapon = Hands()
             demon.take_damage()
         except AttributeError:
             print("There is no one to attack")
@@ -403,8 +409,8 @@ while playing:
             player.consume(player.current_location.item)
             player.current_location.item = None
         except AttributeError:
+            print("You cannot eat that")
             pass
-        print("Command Not Found")
     if not playing:
         break
     if player.health <= 0:
@@ -414,3 +420,8 @@ while playing:
         print("There is a hobo attacking you")
         print("You died")
         break
+    if player.current_location == money_room:
+        print("YOU MADE IT TO THE MONEY ROOM AND WON THE GAME")
+        break
+    if player.current_location == dark_room_2 and command.lower() in ['grab', 'pick up']:
+        player.weapon = ak47
