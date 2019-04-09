@@ -58,7 +58,7 @@ class Player(object):
 
     def take_damage(self, damage: int):
         self.health -= damage
-        print("%s has %d health left" % (self.name, self.health))
+        print("%s have %d health left" % (player.name, self.health))
 
     def attack(self, target):
         print("%s attacks %s for %d damage" % (player.name, target.name, player.weapon.damage))
@@ -86,10 +86,11 @@ class Demon(object):
 
     def take_damage(self, damage: int):
         self.health -= damage
+        if demon.health <= 0:
+            demon.health = 0
         print("The demon has %d health left" % self.health)
-        if self.health <= 0:
-            print("The demon died")
-            return
+        if demon.health <= 0:
+            demon.health = 0
 
 
 class Melee(Item):
@@ -127,17 +128,17 @@ class AssaultRifle(Gun):
 
 class AK47(AssaultRifle):
     def __init__(self):
-        super(AK47, self).__init__("AK47", 35, 200)
+        super(AK47, self).__init__("AK47", 100, 200)
 
 
 class Scar(AssaultRifle):
     def __init__(self):
-        super(Scar, self).__init__("Scar", 50, 180)
+        super(Scar, self).__init__("Scar", 90, 180)
 
 
 class Burst(AssaultRifle):
     def __init__(self):
-        super(Burst, self).__init__("Burst", 35, 120)
+        super(Burst, self).__init__("Burst", 125, 120)
 
 
 class Revolver(Pistol):
@@ -324,21 +325,20 @@ inside_home = Room('Inside The House', 'dark_room', 'kitchen', 'unlocked_room', 
                                                                                                   ", and a kitchen to "
                                                                                                   "the south",
                    blue_gold_fish)
-kitchen = Room('The Kitchen', 'inside_home', 'outside_home', None, None, None, None, "You are in the kitchen and there "
-                                                                                     "is a burst on the counter", burst)
+kitchen = Room('The Kitchen', 'inside_home', 'outside_home', None, None, None, None, "You are in the kitchen.", burst)
 unlocked_room = Room('The Locked Room', None, 'dark_room_2', None, 'inside_home', None, None, "You are now inside the "
                                                                                               "unlocked room.")
 dark_room = Room('The Dark Room', None, 'inside_home', None, None, None, None, "There is no where to go.")
-dark_hallway = Room('The Dark Hallway', None, None, 'dark_room_2', 'locked_door', None, None, "You are inside a dark "
-                                                                                              "hallway that stretches "
-                                                                                              "West-East.")
-locked_door = Room('The Locked Door', None, None, 'dark_hallway', 'money_room', None, None, "There is a locked door "
-                                                                                            "and "
-                                                                                            "there is a key to open "
-                                                                                            "it.")
-money_room = Room('The Money Room', None, None, 'locked_door', None, None, None, "There is money everywhere and you "
-                                                                                 "need to go back to the "
-                                                                                 "store to buy a rifle.", phone)
+dark_hallway = Room('The Dark Hallway', None, None, 'dark_room_2', 'last_door', None, None, "You are inside a dark "
+                                                                                            "hallway that stretches "
+                                                                                            "West-East.")
+last_door = Room('The Last Door', None, None, 'dark_hallway', 'money_room', None, None, "Tt is the last door"
+                                                                                        "and "
+                                                                                        "there is a room to the "
+                                                                                        "west.")
+money_room = Room('The Money Room', None, None, 'last_door', None, None, None, "There is money everywhere and you "
+                                                                               "need to go back to the "
+                                                                               "store to buy a rifle.", phone)
 closet = Room('The Closet', None, 'blue_store', None, None, None, None, "You are inside the closet.", flashlight)
 dark_room_2 = Room('The Second Dark Room', None, None, None, 'dark_hallway', None, None, "You are inside a pitch black "
                                                                                          "room and to the west is a "
@@ -355,7 +355,7 @@ while playing:
         print('\033[4m' + "A demon is always following you, he has 300 health, he only attacks when you "
               "enter the wrong room, "
               "he deals "
-              "25 damage each time" + '\033[1m')
+              "35 damage each time" + '\033[1m')
     deal_damage = False
     print(player.current_location.name)
     print(player.current_location.description)
@@ -373,7 +373,7 @@ while playing:
             print("You cannot pick this up")
             pass
     if flashlight in player.inventory and ('turn on' in command.lower() or 'flip on' in command.lower()):
-        player.turn_off()
+        player.turn_on()
         player.current_location.item = None
     if flashlight not in player.inventory and ('turn on' in command.lower() or 'flip on' in command.lower()):
         print("You don't have a flashlight")
@@ -396,6 +396,13 @@ while playing:
             if player.weapon is None:
                 player.weapon = Hands()
             demon.take_damage()
+            if demon.health <= 0:
+                demon.health = 0
+            if demon.health == 0:
+                print("You have killed the demon and won the game.")
+                break
+            print("The demon hit you back for 35 damage")
+            player.take_damage(35)
         except AttributeError:
             print("There is no one to attack")
     elif command.lower() in directions:
@@ -425,3 +432,5 @@ while playing:
         break
     if player.current_location == dark_room_2 and command.lower() in ['grab', 'pick up']:
         player.weapon = ak47
+    if player.current_location == kitchen and command.lower() in ['grab', 'pick up']:
+        player.weapon = burst
