@@ -12,6 +12,7 @@
     <SUITE FILE_PATH="coverage/CSE$Dictionary_Notes.coverage" NAME="Dictionary Notes Coverage Results" MODIFIED="1549386197348" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CSE$Object_Assignment___Gannon_Peebles.coverage" NAME="Object Assignment - Gannon Peebles Coverage Results" MODIFIED="1550683721526" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CSE$Item___Gannon_Peebles.coverage" NAME="Item - Gannon Peebles Coverage Results" MODIFIED="1552670203829" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/CSE$sup_yall.coverage" NAME="sup yall Coverage Results" MODIFIED="1554999631683" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CSE$Semester_2_Notes.coverage" NAME="Semester 2 Notes Coverage Results" MODIFIED="1547572189711" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CSE$Object_Notes___Gannon_Peebles.coverage" NAME="Object Notes - Gannon Peebles Coverage Results" MODIFIED="1550165213923" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CSE$Semseter_2_Adventure_Game___Gannon_Peebles.coverage" NAME="Semseter 2 Adventure Game - Gannon Peebles Coverage Results" MODIFIED="1549993016620" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -19,7 +20,7 @@
     <SUITE FILE_PATH="coverage/CSE$Dictionary_World_Map___Gannon_Peebles.coverage" NAME="Dictionary World Map - Gannon Peebles Coverage Results" MODIFIED="1549044731459" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CSE$GOD.coverage" NAME="GOD Coverage Results" MODIFIED="1549560530567" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CSE$Special_Random.coverage" NAME="Special_Random Coverage Results" MODIFIED="1550079089376" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/CSE$World_Map_OOP___Gannon_Peebles.coverage" NAME="World Map OOP - Gannon Peebles Coverage Results" MODIFIED="1554827553006" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/CSE$World_Map_OOP___Gannon_Peebles.coverage" NAME="World Map OOP - Gannon Peebles Coverage Results" MODIFIED="1554911586033" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -39,14 +40,14 @@
     <session id="-1948587980">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="62" />
+          <entry key="project.closed" value="64" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.12" value="8" />
           <entry key="project.open.time.13" value="7" />
           <entry key="project.open.time.14" value="5" />
-          <entry key="project.open.time.15" value="6" />
+          <entry key="project.open.time.15" value="7" />
           <entry key="project.open.time.16" value="4" />
-          <entry key="project.open.time.17" value="5" />
+          <entry key="project.open.time.17" value="6" />
           <entry key="project.open.time.18" value="3" />
           <entry key="project.open.time.19" value="1" />
           <entry key="project.open.time.21" value="2" />
@@ -70,40 +71,40 @@
           <entry key="project.open.time.65" value="1" />
           <entry key="project.open.time.66" value="1" />
           <entry key="project.open.time.69" value="1" />
-          <entry key="project.opened" value="64" />
+          <entry key="project.opened" value="66" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="27" />
+          <entry key="py" value="29" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="27" />
+          <entry key="Python" value="29" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dummy" value="19" />
-          <entry key="py" value="27177" />
+          <entry key="dummy" value="29" />
+          <entry key="py" value="27462" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="19" />
-          <entry key="Python" value="27177" />
+          <entry key="PLAIN_TEXT" value="29" />
+          <entry key="Python" value="27462" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/World Map OOP - Gannon Peebles.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="399" column="32" lean-forward="true" selection-start-line="399" selection-start-column="32" selection-end-line="399" selection-end-column="32" />
+            <state relative-caret-position="153">
+              <caret line="9" column="38" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
               <folding>
                 <marker date="1554828135815" expanded="true" signature="19:24" ph="..." />
                 <marker date="1554828135815" expanded="true" signature="520:523" ph="..." />
@@ -111,6 +112,32 @@
                 <marker date="1554828135815" expanded="true" signature="2488:7041" ph="..." />
                 <marker date="1554828135815" expanded="true" signature="6879:6884" ph="..." />
                 <marker date="1554828135815" expanded="true" signature="6959:7041" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Final Game.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2792">
+              <caret line="234" column="29" lean-forward="true" selection-start-line="234" selection-start-column="29" selection-end-line="234" selection-end-column="29" />
+              <folding>
+                <element signature="e#470#520#0" />
+                <element signature="e#2493#2969#0" />
+                <element signature="e#2995#3148#0" />
+                <element signature="e#3172#3536#0" />
+                <element signature="e#3562#3658#0" />
+                <element signature="e#3690#3792#0" />
+                <element signature="e#3825#3897#0" />
+                <element signature="e#3930#4001#0" />
+                <element signature="e#4035#4109#0" />
+                <element signature="e#4140#4218#0" />
+                <element signature="e#4249#4376#0" />
+                <element signature="e#4415#4498#0" />
+                <element signature="e#4530#4598#0" />
+                <element signature="e#4636#4718#0" />
+                <element signature="e#4756#4831#0" />
               </folding>
             </state>
           </provider>
@@ -232,6 +259,8 @@
         <option value="$PROJECT_DIR$/Inheritance.py" />
         <option value="$PROJECT_DIR$/Item - Gannon Peebles.py" />
         <option value="$PROJECT_DIR$/World Map OOP - Gannon Peebles.py" />
+        <option value="$PROJECT_DIR$/sup yall.py" />
+        <option value="$PROJECT_DIR$/Final Game.py" />
       </list>
     </option>
   </component>
@@ -252,12 +281,30 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes />
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="CSE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CSE" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\xp8x\Documents\GitHub\CSE" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -271,7 +318,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.World Map OOP - Gannon Peebles">
+  <component name="RunManager" selected="Python.sup yall">
     <configuration name="Item - Gannon Peebles" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="CSE" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -338,28 +385,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Special_Random" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="CSE" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Special_Random.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="World Map OOP - Gannon Peebles" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="CSE" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -382,20 +407,42 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="sup yall" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="CSE" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\xp8x\Documents\GitHub\CSE\Final Game.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Python.Object Notes - Gannon Peebles" />
-      <item itemvalue="Python.Special_Random" />
       <item itemvalue="Python.Object Assignment - Gannon Peebles" />
       <item itemvalue="Python.World Map OOP - Gannon Peebles" />
       <item itemvalue="Python.Item - Gannon Peebles" />
+      <item itemvalue="Python.sup yall" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.sup yall" />
         <item itemvalue="Python.World Map OOP - Gannon Peebles" />
         <item itemvalue="Python.Item - Gannon Peebles" />
         <item itemvalue="Python.Object Assignment - Gannon Peebles" />
         <item itemvalue="Python.Object Notes - Gannon Peebles" />
-        <item itemvalue="Python.Special_Random" />
       </list>
     </recent_temporary>
   </component>
@@ -421,7 +468,7 @@
       <window_info content_ui="combo" id="Project" order="2" weight="0.43494704" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49848714" visible="true" weight="0.29344264" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49848714" weight="0.29344264" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39836067" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -435,8 +482,8 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" weight="0.32980332" />
-      <window_info anchor="right" id="SciView" order="4" weight="0.32980332" />
+      <window_info anchor="right" id="SciView" order="3" weight="0.32980332" />
+      <window_info anchor="right" id="Database" order="4" weight="0.32980332" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -523,8 +570,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/World Map OOP - Gannon Peebles.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="399" column="32" lean-forward="true" selection-start-line="399" selection-start-column="32" selection-end-line="399" selection-end-column="32" />
+        <state relative-caret-position="153">
+          <caret line="9" column="38" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
           <folding>
             <marker date="1554828135815" expanded="true" signature="19:24" ph="..." />
             <marker date="1554828135815" expanded="true" signature="520:523" ph="..." />
@@ -533,6 +580,13 @@
             <marker date="1554828135815" expanded="true" signature="6879:6884" ph="..." />
             <marker date="1554828135815" expanded="true" signature="6959:7041" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/4-10-19 Gallery Walk.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
         </state>
       </provider>
     </entry>
@@ -603,6 +657,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="24" column="67" selection-start-line="24" selection-start-column="61" selection-end-line="24" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Final Game.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2792">
+          <caret line="234" column="29" lean-forward="true" selection-start-line="234" selection-start-column="29" selection-end-line="234" selection-end-column="29" />
+          <folding>
+            <element signature="e#470#520#0" />
+            <element signature="e#2493#2969#0" />
+            <element signature="e#2995#3148#0" />
+            <element signature="e#3172#3536#0" />
+            <element signature="e#3562#3658#0" />
+            <element signature="e#3690#3792#0" />
+            <element signature="e#3825#3897#0" />
+            <element signature="e#3930#4001#0" />
+            <element signature="e#4035#4109#0" />
+            <element signature="e#4140#4218#0" />
+            <element signature="e#4249#4376#0" />
+            <element signature="e#4415#4498#0" />
+            <element signature="e#4530#4598#0" />
+            <element signature="e#4636#4718#0" />
+            <element signature="e#4756#4831#0" />
+          </folding>
         </state>
       </provider>
     </entry>
