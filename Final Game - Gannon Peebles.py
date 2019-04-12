@@ -58,6 +58,8 @@ class Player(object):
 
     def take_damage(self, damage: int):
         self.health -= damage
+        if self.health < 0:
+            self.health = 0
         print("%s have %d health left" % (player.name, self.health))
 
     def attack(self, target):
@@ -86,11 +88,9 @@ class Demon(object):
 
     def take_damage(self, damage: int):
         self.health -= damage
-        if demon.health <= 0:
-            demon.health = 0
+        if self.health <= 0:
+            self.health = 0
         print("The demon has %d health left" % self.health)
-        if demon.health <= 0:
-            demon.health = 0
 
 
 class Melee(Item):
