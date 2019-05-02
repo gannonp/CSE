@@ -1,27 +1,28 @@
 import csv
 
 
-def sixteen_digits(num: str):
-    if (len(num)) == 16:
-        if len(num) == 16:
+def sixteen_digits(number16: str):
+    if (len(number16)) == 16:
+        if len(number16) == 16:
             return True
         else:
             print("NOT EVERY NUMBER IS 16 DIGITS!")
             return False
 
 
-def divisible_by_2(num: int):
-    if num % 2 == 0:
+def divisible_by_2(number: int):
+    if number % 2 == 0:
         return True
     return False
 
 
 def valid_card_number(num: str):
-    last_num = int(num[15])
-    valid_card_number_list = list(num)
-    valid_card_number_list.remove(last_num)
     if not sixteen_digits(num):
         return False
+    valid_card_number_list = list(num)
+    valid_card_number_list.pop(15)
+    for number in range(len(valid_card_number_list)):
+        valid_card_number_list[number] = int(valid_card_number_list[number])
     reversed_num = num[::-1]
     reversed_num_list = list(reversed_num)
     for index in range(len(reversed_num_list)):
@@ -33,8 +34,10 @@ def valid_card_number(num: str):
     sum_numbers = sum(reversed_num_list)
     if (sum_numbers % 10) == 0:
         print("Valid Card Number")
+        return True
     else:
         print("Invalid Card Number")
+        return False
 
 
 with open("Book1.csv", 'r') as old_csv:
@@ -43,4 +46,8 @@ with open("Book1.csv", 'r') as old_csv:
         writer = csv.writer(new_csv)
         print("Processing...")
         for row in reader:
-            if
+            num = row[0]
+            if valid_card_number(row):
+                writer.writerow(row)
+        print("Done")
+
